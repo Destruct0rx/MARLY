@@ -16,25 +16,16 @@
     font-display: swap;
 }
 
-
 body {
-    /* Fondo: imagen local descargada */
-    background-color: #0b0b0b;
-    /* Usamos un elemento <img> para el fondo (mejor control del tamaño) */
-    color: rgba(255,255,255,0.95);
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 50px;
-    margin: 0;
-    .overlay {
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.15),
-        rgba(0,0,0,0.45)
-    );
+    min-height: 100vh;
+    background-image: url("images/marly-game-pc.png");
+    background-size: cover;      /* clave */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-}
+
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -456,5 +447,3 @@ p{
     box-shadow:
         0 0 calc(var(--music-glow) * 25px) rgba(0,255,240,0.6);
 }
-
-
