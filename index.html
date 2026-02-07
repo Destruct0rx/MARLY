@@ -4,11 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MARLY GAME</title>
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Tu CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -30,7 +25,14 @@
                 </filter>
             </defs>
         </svg>
-        <img class="bg" src="images/marly-game-pc.png" alt="Fondo MARLY GAME PC">
+        <picture class="bg">
+    <!-- Imagen para móviles -->
+    <source srcset="images/marly-game-mobile.png" media="(max-width: 768px)">
+    
+    <!-- Imagen para PC -->
+    <img src="images/marly-game-pc.png" alt="Fondo MARLY GAME">
+</picture>
+
     <div class="overlay"></div>
     <div class="content">
     <h1>MARLY GAME</h1>
