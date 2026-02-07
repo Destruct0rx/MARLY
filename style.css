@@ -16,14 +16,33 @@
     font-display: swap;
 }
 
-body {
-    min-height: 100vh;
-    background-image: url("images/marly-game-pc.png");
-    background-size: cover;      /* clave */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+
+/* ===== FONDO RESPONSIVE PC / MOBILE ===== */
+.bg img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
 }
+
+/* Overlay oscuro */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+
+/* Imagen espejo solo en móvil */
+@media (max-width: 768px) {
+    .bg img {
+        transform: scaleX(-1);
+    }
+}
+
 
 
 button {
@@ -82,7 +101,6 @@ p { margin: 18px 0; }
     0 0 24px rgba(0,255,247,0.6);
 }
 
-}
 /* Efecto visual al hacer clic: escala + sombra */
 .entry-option-btn{
     position: relative;
@@ -446,4 +464,10 @@ p{
 .entry-option-btn {
     box-shadow:
         0 0 calc(var(--music-glow) * 25px) rgba(0,255,240,0.6);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
 }
