@@ -1,0 +1,70 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MARLY GAME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<audio id="bg-music" autoplay loop volume="0.3">
+    <source src="audio/musica.mp3" type="audio/mpeg">
+</audio>
+
+
+<img src="images/mascota.gif" class="gif-bottom-right" alt="Mascota animada">
+
+<body>
+        <svg aria-hidden="true" style="position:absolute; width:0; height:0; overflow:hidden;" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="water">
+                    <feTurbulence id="turb" baseFrequency="0.02 0.06" numOctaves="2" seed="2" stitchTiles="noStitch" result="noise">
+                        <animate attributeName="baseFrequency" dur="6s" values="0.02 0.06;0.03 0.02;0.02 0.06" repeatCount="indefinite" />
+                    </feTurbulence>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" xChannelSelector="R" yChannelSelector="G" />
+                    <feGaussianBlur stdDeviation="0.6" />
+                </filter>
+            </defs>
+        </svg>
+        <img class="bg" src="images/marly-game-pc.png" alt="Fondo MARLY GAME PC">
+    <div class="overlay"></div>
+    <div class="content">
+    <h1>MARLY GAME</h1>
+    <p data-text="BIENVENIDOS AL MUNDO HURON">BIENVENIDOS AL MUNDO HURON</p>
+    <div class="entry-options">
+        <h2>SIGUEME</h2>
+            <div class="options-inline">
+                <button class="entry-option-btn" data-action="discord">
+    <span class="icon discord" aria-hidden="true"></span>
+    <span class="label">Discord</span>
+</button>
+
+                <button class="entry-option-btn" data-action="youtube">
+    <span class="icon youtube"></span>
+    <span class="label">YouTube</span>
+</button>
+
+<button class="entry-option-btn" data-action="tiktok">
+    <span class="icon tiktok"></span>
+    <span class="label">TikTok</span>
+</button>
+
+<button class="entry-option-btn" data-action="instagram">
+    <span class="icon instagram"></span>
+    <span class="label">Instagram</span>
+</button>
+
+<button class="entry-option-btn" data-action="twitch">
+    <span class="icon twitch"></span>
+    <span class="label">Twitch</span>
+</button>
+
+            </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    </div>
+</body>
+</html>
