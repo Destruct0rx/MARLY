@@ -34,6 +34,7 @@ body {
     );
 }
 
+}
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -455,4 +456,5 @@ p{
     box-shadow:
         0 0 calc(var(--music-glow) * 25px) rgba(0,255,240,0.6);
 }
+
 
